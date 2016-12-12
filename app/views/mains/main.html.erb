@@ -2,23 +2,23 @@
  
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
-    <div class="item active" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
-      <%- # image_tag '/assets/goat.png', style: 'position: fixed; top: 0; left: 0; width: 100%; height: auto;', class: 'carosel-image' %>
-      <%= image_tag "/assets/#{@first_file}", class: 'carousel-image', style: "position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" %>
+  <div class="carousel-inner" role="listbox" class="image-container" >
+    <div class="item active image-container">
+      <img src="<%= image_url "/assets/#{@first_file}"%>"  class="carousel-image image">
+      </img>
     </div>
 
     <%- @urls.each do |file| %>
-      <div class="item" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
-        <%- # image_tag '/assets/goat.png', style: 'position: fixed; top: 0; left: 0; width: 100%; height: auto;', class: 'carosel-image' %>
-        <%= image_tag file, class: 'carousel-image', style: "position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" %>
+      <div class="item image-container">
+        <img src="<%= image_url "/assets/#{file}"%>"  class="carousel-image image">
+        </img>
       </div>
     <%- end %>
 
     <%- @files.each do |file| %>
-      <div class="item" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
-        <%- # image_tag '/assets/goat.png', style: 'position: fixed; top: 0; left: 0; width: 100%; height: auto;', class: 'carosel-image' %>
-        <%= image_tag "/assets/#{file}", class: 'carousel-image', style: "position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" %>
+      <div class="item image-container">
+        <img src="<%= image_url "/assets/#{file}"%>"  class="carousel-image image">
+        </img>
       </div>
     <%- end %>
   </div>

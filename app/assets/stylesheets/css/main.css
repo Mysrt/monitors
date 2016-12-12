@@ -1,0 +1,16 @@
+.image {
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%:
+}
+
+.image-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
