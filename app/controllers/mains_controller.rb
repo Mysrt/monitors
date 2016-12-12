@@ -10,6 +10,8 @@ class MainsController < ApplicationController
       load_raw_image_files
       load_url_files
 
+      @total_items = @urls.size + @files.size + 1 #+1 for @first_file
+
       respond_to do |format|
         format.html{
           render "main"

@@ -3,20 +3,20 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox" class="image-container" >
-    <div class="item active image-container">
+    <div class="item active" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
       <img src="<%= image_url "/assets/#{@first_file}"%>"  class="carousel-image image">
       </img>
     </div>
 
     <%- @urls.each do |file| %>
-      <div class="item image-container">
-        <img src="<%= image_url "/assets/#{file}"%>"  class="carousel-image image">
+      <div class="item" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
+        <img src="<%= file %>"  class="carousel-image image">
         </img>
       </div>
     <%- end %>
 
     <%- @files.each do |file| %>
-      <div class="item image-container">
+      <div class="item" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
         <img src="<%= image_url "/assets/#{file}"%>"  class="carousel-image image">
         </img>
       </div>
