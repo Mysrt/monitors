@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   MainsController::ENDPOINTS.each do |endpoint_name|
     get endpoint_name, to: "mains##{endpoint_name}"
   end
+
+  resources :files, only: [:show]
 end

@@ -4,7 +4,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox" class="image-container" >
     <div class="item active" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
-      <img src="<%= image_url "/assets/#{@first_file}"%>"  class="carousel-image image">
+      <img src="<%= image_url file_path(id: @first_file, folder: @dir_name)%>"  class="carousel-image image">
       </img>
     </div>
 
@@ -17,7 +17,7 @@
 
     <%- @files.each do |file| %>
       <div class="item" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
-        <img src="<%= image_url "/assets/#{file}"%>"  class="carousel-image image">
+        <img src="<%= image_url file_path(id: file, folder: @dir_name)%>"  class="carousel-image image">
         </img>
       </div>
     <%- end %>
