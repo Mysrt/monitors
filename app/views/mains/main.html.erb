@@ -2,6 +2,10 @@
  
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Wrapper for slides -->
+  <div id='total-items-count' style='display: none'>
+    <%= @total_items %>
+  </div>
+
   <div class="carousel-inner" role="listbox" class="image-container" >
     <div class="item active" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
       <img src="<%= image_url file_path(id: @first_file, folder: @dir_name)%>"  class="carousel-image image">

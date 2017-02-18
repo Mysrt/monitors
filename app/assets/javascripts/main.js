@@ -7,7 +7,7 @@ $(document).ready(function(){
   $('.carousel').carousel({interval: 30000, wrap: true, pause: null});
 
   //CHANGE NUMBER BELOW FOR PAGE REFRESH INTERVAL
-  var total_items = $('.item').size();
+  var total_items = parseInt($('#total-items-count').html());
   setInterval(function() { window.location.reload(); }, (total_items * 30000) ); 
 });
 
